@@ -1,3 +1,7 @@
+body {
+  background:  url(image/cat.jpg) center center no-repeat fixed;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +24,14 @@
 
   #products .products-list,
   #info .product-info,
-  #buy {
+  #buy,
+  #form {
     display: none;
   }
   #products .products-list.shown,
   #info .product-info.shown,
-  #buy.shown {
+  #buy.shown,
+  #form.shown {
     display: block
   }
 

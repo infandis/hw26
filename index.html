@@ -79,6 +79,38 @@
             <button id="buy">КУПИТИ</button>
         </div>
     </div>
+    <div class="formContainer">
+        <form id="form">
+            <label for="pib">ПІБ:</label>
+            <input type="text" id="pib" name="pib" required><br>
+
+            <label for="city">Місто:</label>
+            <select id="city" name="city" required>
+              <option value="Київ">Київ</option>
+              <option value="Львів">Львів</option>
+              <option value="Одеса">Одеса</option>
+              <option value="Ужгород">Ужгород</option>
+              <option value="Чернівці">Чернівці</option>
+            </select><br>
+          
+            <label for="NP">Склад Нової пошти для надсилання:</label>
+            <input type="text" id="NP" name="NP" value="" required ><br>
+          
+            <label for="payment">Післяплата / оплата банківською карткою:</label>
+            <input type="radio" id="payment" name="payment" value="Післяплата">
+            <label for="payment">Післяплата</label>
+            <input type="radio" id="payment" name="payment" value="Оплата банківською карткою" checked>
+            <label for="payment">Оплата банківською карткою</label><br>
+          
+            <label for="quantity">Кількість продукції:</label>
+            <input type="number" id="quantity" name="quantity" min="1"><br>
+          
+            <label for="comment">Коментар до замовлення:</label><br>
+            <textarea id="comment" name="comment"></textarea><br>
+
+            <button id="submit" type="submit">Відправити:</button>
+        </form>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

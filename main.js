@@ -26,11 +26,25 @@ document.getElementById("products").addEventListener("click", function (event) {
     }
 });
 
+//
+const form = document.getElementById("form");
 document.getElementById("buy").addEventListener("click", function(event) {
-    let titleElement = document.querySelector(".product-info.shown .title");
-    let title = titleElement ? titleElement.textContent : "товар";
-    alert(`Тепер у вас є ${title}!`);
-    hide();
+    form.classList.add("shown");   
+})
+
+//
+document.getElementById("submit").addEventListener("click", function(event) {
+    if(form.checkValidity()) {
+        let titleElement = document.querySelector(".product-info.shown .title");
+        let title = titleElement ? titleElement.textContent : "товар"; 
+        let pib = document.getElementById("pib").value;
+        let city = document.getElementById("city").value;
+        let NP = document.getElementById("NP").value;
+        alert("Ви успішно придбали " + title + ". Товар буде доставлено в "  + city + ",  відділення Нової пошти номер " + NP);
+        hide(); 
+    } else {
+        alert("Необхідно вказати дані для відправки");  
+    }   
 })
 
 function hide() {
