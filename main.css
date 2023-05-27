@@ -34,7 +34,7 @@
   #form,
   .orders-wrapper,
   .shop-wrapper,
-  .order-details {
+  .order .order-details {
     display: none;
   }
 
@@ -44,7 +44,7 @@
   #form.shown,
   .orders-wrapper.shown,
   .shop-wrapper.shown,
-  .order-details.shown {
+  .order.shown .order-details {
     display: block
   }
 
@@ -65,4 +65,34 @@
     margin-top: 20px;
     padding: 1%;
     background-color: aqua;
+  }
+
+  #form {
+    margin-bottom: 10px;
+  }
+
+  .order {
+    margin: 10px 0;
+  }
+
+  .order-title {
+    cursor: pointer;
+  }
+  
+  .order .order-title::before {
+    display: inline-block;
+    padding-right: 10px;
+    content: "\25BA";
+  }
+
+  .order.shown .order-title::before {
+    content:"\25BC";
+  }
+
+  .order-details {
+    padding: 10px 0 0 50px;
+  }
+
+  .remove-order {
+    margin: 10px 0;
   }
