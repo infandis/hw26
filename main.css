@@ -1,6 +1,4 @@
-body {
-  background:  url(image/cat.jpg) center center no-repeat fixed;
-}
+
 
 .container {
     display: flex;
@@ -18,6 +16,14 @@ body {
     border-radius: 5px;
   }
 
+  #orders-container {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
   ul {
     list-style: none;
   }
@@ -25,13 +31,20 @@ body {
   #products .products-list,
   #info .product-info,
   #buy,
-  #form {
+  #form,
+  .orders-wrapper,
+  .shop-wrapper,
+  .order-details {
     display: none;
   }
+
   #products .products-list.shown,
   #info .product-info.shown,
   #buy.shown,
-  #form.shown {
+  #form.shown,
+  .orders-wrapper.shown,
+  .shop-wrapper.shown,
+  .order-details.shown {
     display: block
   }
 
