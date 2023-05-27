@@ -1,3 +1,8 @@
+const ordersWrapper = document.querySelector('.orders-wrapper');
+const shopWrapper = document.querySelector('.shop-wrapper');
+const ordersContainer = document.getElementById("orders-container");
+const form = document.getElementById("form");
+
 document.getElementById("categories").addEventListener("click", function (event) {
     if (event.target.tagName === "LI") {
         hide();
@@ -27,15 +32,11 @@ document.getElementById("products").addEventListener("click", function (event) {
 });
 
 //
-const form = document.getElementById("form");
 document.getElementById("buy").addEventListener("click", function (event) {
     form.classList.add("shown");
 });
 
 //
-const ordersWrapper = document.querySelector('.orders-wrapper');
-const shopWrapper = document.querySelector('.shop-wrapper');
-const ordersContainer = document.getElementById("orders-container");
 document.getElementById("orders-btn").addEventListener("click", function (event) {
     shopWrapper.classList.remove("shown");
     ordersWrapper.classList.add("shown");
@@ -113,12 +114,9 @@ function showOrders() {
     }
 }
 
-let addOrder = function (order) {
-    localStorage.setItem(order.id, JSON.stringify(order));
-};
+// localStorage
 
-
-let getOrders = function () {
+function getOrders() {
     let orders = [];
     let keys = Object.keys(localStorage);
     keys.forEach(function (key) {
@@ -127,6 +125,10 @@ let getOrders = function () {
         orders.push(value);
     });
     return orders;
+};
+
+function addOrder(order) {
+    localStorage.setItem(order.id, JSON.stringify(order));
 };
 
 function deleteOrder(orderId) {
